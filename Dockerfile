@@ -7,7 +7,6 @@ FROM quay.io/keycloak/keycloak:${KC_VERSION} AS builder
 # Если у тебя есть theme или провайдер в локальной папке
 # Копируем .jar провайдера
 COPY dist_keycloak/keycloak-theme-for-kc-all-other-versions.jar /opt/keycloak/providers/
-COPY dist_keycloak/postgresql.jar /opt/keycloak/providers/
 
 # Устанавливаем нужные env, если хочешь health, metrics etc.
 ENV KC_HEALTH_ENABLED=true
