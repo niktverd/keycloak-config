@@ -13,7 +13,13 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-    render: () => <KcPageStory />
+    render: () => (
+        <KcPageStory
+            kcContext={{
+                themeName: "unico-default"
+            }}
+        />
+    )
 };
 
 export const WithInvalidCredential: Story = {
